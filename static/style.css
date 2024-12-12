@@ -13,13 +13,3 @@ body{
 .main{
     color: aquamarine;
 }
-
-.button{
-    background-color: yellow;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 20px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    
-}
