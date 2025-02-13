@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title>{{category_name}}</title>
+{% endblock title %}
+{% block content %}
+
+  <main class="container my-5">
+    
+    <div class="mt-3 d-flex flex-column flex-lg-row justify-content-center align-items-center mb-4 text-dark lh-sm text-decoration-none">
+      {% for article in articles %}
+      <div class="rectangle me-2">  
+        {% if article[4] %}
+        <img src="{{url_for('static', filename='img/' + article[4])}}" alt="" style="width:419px;" class="in-rect">
+        {% endif %}        
+        
+        <div class="text-content">
+          <h3 style="font-weight: bold; padding: 1px 20px; margin: 0px; margin-top:170px">{{ article[1] }}</h3>
+          <h5 style="color: rgb(182, 182, 182); font-weight: bold; font-size: 15px; margin: 5px 20px;">Sam Laurent</h5>            
+          <p style="padding: 0px 20px; font-size:15px; margin-top:20px">{{article[2]}}</p>
+          <div style="display: flex; align-items: center; justify-content: space-between; margin: 0px 20px;">
+            <div style="display: flex; align-items: center;">
+              <img src="static/img/eye.png" alt="" style="width: 17px; margin-right: 5px;">
+              <p style="font-size: 12px; color: #808080; margin: 0;">100,000 views</p>
+            </div>
+            <a href="{{url_for('article_page', article_id=article[0])}}" class="btn btn-light" style="height: 30px; font-size: small;">Read</a>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+      
+    </div>
+
+
+    
+
+
+  </main>
+
+{% endblock content %}

@@ -1,15 +1,144 @@
-h1{
-    color:rgb(215, 139, 72);
-    font-style: bold;
-    font-size: 30px;
-    text-align: center;
+body{
+    font-family: SF Pro Text, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    overflow-y: scroll;
+    
 }
 
-body{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: rgb(28, 28, 28);
-    color: white;
+
+
+.logo_text{
+    font-family: "Oswald", serif;
+    position: relative;
 }
-.main{
-    color: aquamarine;
+
+.footer_text{
+    width:300px;
+    font-size: small; 
+    color:rgb(170, 170, 170);
+}
+
+
+.logo_text span {
+    position: absolute;
+    left: 40px; /* Відступ від лівого краю */
+}
+
+.neonText {
+    color: #fff;
+    font-family: "Homemade Apple", serif;
+    text-shadow:
+        0 0 7px #ffffff9e,
+        0 0 10px #ffffff7a,
+        0 0 16px #ffffff51,
+        0 0 22px rgb(255, 123, 0),
+        0 0 32px rgba(255, 123, 0, 0.821),
+        0 0 42px rgba(255, 123, 0, 0.732),
+        0 0 52px rgba(255, 123, 0, 0.582),
+        0 0 61px rgba(255, 123, 0, 0.367);
+}
+
+.btn{
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rectangle {
+    width: 500px; /* Ширина прямокутника */
+    height: 650px; /* Висота прямокутника */
+    background-color: #202020; /* Основний колір */
+    border: 2px solid #3b3b3b; /* Обведення */
+    border-radius: 50px; /* Закруглення кутів */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
+    display: flex;
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: left; /* Вирівнювання по горизонталі */
+    color: #ffffff; /* Колір тексту */
+    position: relative; /* Для позиціонування вмісту */
+    overflow: hidden; /* Сховати зайве */
+}
+
+
+
+.in-rect{
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 500;
+    object-fit: cover; /* Зберігає пропорції зображення */
+    z-index: 1; /* Рівень зображення */
+}
+
+.rectangle .content {
+    position: relative;
+    z-index: 2; /* Рівень тексту вище зображення */
+    color: #ffffff; /* Колір тексту */
+    font-size: 16px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5); /* Напівпрозорий фон для тексту */
+    border-radius: 0 0 10px 10px; /* Закруглення тільки внизу */
+  }
+
+.center{
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+}
+
+.left{
+    display: flex; 
+    justify-content: left;
+    text-align: left;
+}
+
+.navbar {
+    transition: top 0.3s ease-out;
+    background-color: black; /* Початковий колір */
+    top: -50px; /* Початкова позиція за межами екрану */
+}
+
+.navbar.scrolled {
+    top: 0; /* Позиція після скролу */
+}
+
+
+.center-image {
+    display: flex;
+    justify-content: center;
+}
+
+.center-image img {
+    width: 50%;
+}
+
+.glow {
+    color: transparent; /* Текст прозорий, щоб було видно градієнт */
+    text-align: center; /* Центрування */
+    font-family: Arial, sans-serif; /* Шрифт */
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,      /* Білий зверху */
+        #ffb266 30%,     /* Світло-помаранчевий */
+        #c38841 60%,     /* Насычений помаранчевий */
+        #7c4d2b 100%     /* Темний помаранчевий внизу */
+    );
+    background-clip: text; /* Градієнт для тексту */
+    -webkit-background-clip: text; /* Для Safari */
+    text-shadow: 
+        0 0 5px rgb(255, 255, 255), /* Легке біле сяяння */
+        0 10px 15px rgba(255, 140, 0, 0.3), /* Помаранчеве сяяння вниз */
+        0 20px 30px rgba(255, 80, 0, 0.2);  /* Глибше сяяння вниз */
+}
+
+
+.text-anim{
+    opacity: 1;
+    margin-bottom: -5px;
+    
+
 }

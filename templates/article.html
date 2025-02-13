@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title>{{article[1]}}</title>
+{% endblock title %}
+{% block content %}
+
+  <main class="container my-5">
+    <div class="row">
+      <div class="col-12 col-md-6">
+        {% if article[4] %}
+          <img src="{{url_for('static', filename='img/' + article[4])}}" alt="">
+        {% endif %}
+      </div>
+      <div class="col-12 col-md-6">
+        <p class="">{{article[2]}}</p>
+        <p class="">{{article[3]}}</p>
+        <small>Created {{article[7]}}</small>
+      </div>
+    </div>
+  </main>
+{% endblock content %}

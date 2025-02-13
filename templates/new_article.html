@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}
+  <title>New Article</title>
+{% endblock title %}
+{% block content %}
+<main class="container my-5">
+  <h1 class="my-4">Додавання статті</h1>
+  <form action="" method="post", enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input required name="title" class="form-control" id="exampleFormControlInput1" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+        <textarea name='description' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Start writing...</label>
+        <textarea required name='text' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="formFileMultiple" class="form-label">Images</label>
+        <input class="form-control" name="image" type="file" id="formFileMultiple" multiple>
+      </div>
+      <select class="form-select" name="category" aria-label="Default select example">
+        <option value="" selected>Choose category</option>
+        
+        {% for id, title in categories %}
+          <option value="{{id}}">{{title}}</option>
+        {% endfor %}
+      </select>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form>
+
+</main>
+{% endblock content%}
